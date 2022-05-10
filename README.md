@@ -1,0 +1,25 @@
+# Grupo_1_SPORTS-HOUSE
+SPORTS HOUSE
+
+Este proyecto está destinado a la creación de un ecomerce dedicado a la venta de artículos de deportes. 
+La actividad a desarrollar por este negocio será la comercialización al detalle de artículos deportivos (zapatería, confección y pequeños complementos). 
+Trabajando con marcas reconocidas como Nike, Puma, Topper, Adidas, entre otras.
+Se tendrá como objetivo captar a la Población en general, que practique algún tipo de deporte o que guste vestir ropa deportiva. 
+Esta se puede segmentar a su vez, en distintos grupos en función de la edad (edad escolar, jóvenes, adultos, etc.). 
+Deportes que practiquen (fútbol, tenis, baloncesto, etc.), gustos y hábitos.
+
+Nuestro equipo de trabajo está conformado por:
+César Franco Chávez, quien reside en la ciudad de la Calera, provincia de Córdoba y trabaja actualmente como Técnico Electricista.
+Konrad Knochenhauer Salazar, quien reside en la Ciudad de México trabajando actualmente como arquitecto, le apasiona el mundo de la programación.
+Luis Miguel Paca, quien actualmente vive en Capital federal, Buenos Aires. Es una persona que disfruta mucho ver series animadas. 
+Actualmente trabaja como guardia de Seguridad de un Sanatorio privado.
+Por último, Fiorella Cardenal, quien reside en la localidad de Santa Fe Capital y actualmente se encuentra formando parte de la Mutual Jerárquicos Salud. 
+Somos un equipo de Estudiantes del Curso de Programación Web Full Stack y nuestra meta es 
+llegar a construir una tienda web en la que cada tipo de consumidor encuentre lo que busque rápido y cómodamente.
+
+Por tal motivo tomaremos como referencia las siguientes páginas web:
+https://www.dexter.com.ar/zapatillas-fila-axilus-ace-clay/FI_F01TN004171-4816.html
+https://www.behance.net/gallery/67629967/Shoesstore?tracking_source=search_projects%7Cweb%20 
+https://www.newsport.com.ar/
+https://ar.puma.com/
+https://www.adidas.com.ar/

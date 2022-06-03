@@ -23,3 +23,5 @@ https://www.behance.net/gallery/67629967/Shoesstore?tracking_source=search_proje
 https://www.newsport.com.ar/
 https://ar.puma.com/
 https://www.adidas.com.ar/
+
+Link de Trello https://trello.com/b/WQGAdHFF/grupo-1

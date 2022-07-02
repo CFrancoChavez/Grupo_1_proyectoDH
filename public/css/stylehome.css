@@ -28,9 +28,12 @@ header{
     height: 138px;
 }
 
+<<<<<<< HEAD
 .logo:hover{
     opacity: calc(.5);
 }
+=======
+>>>>>>> 3d34ddf0f4cd38b24f750c113f8b1351a352ca39
 /*.logo img:hover{
     opacity: .5;
 }*/

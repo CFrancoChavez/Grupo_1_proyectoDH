@@ -4,13 +4,20 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "nodemon src/app.js"
+=======
+    "start": "node app.js"
+>>>>>>> 3d34ddf0f4cd38b24f750c113f8b1351a352ca39
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "ejs": "^3.1.8",
+=======
+>>>>>>> 3d34ddf0f4cd38b24f750c113f8b1351a352ca39
     "express": "^4.18.1"
   }
 }

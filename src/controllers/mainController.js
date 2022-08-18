@@ -15,7 +15,7 @@ const controller = {
     index: (req, res) => {
         // const menu = readJsonFile(menuDbPath);
 
-        return res.render("home" )
+        return res.render("home")
     },
     search: (req, res) => {
 		res.render('results')

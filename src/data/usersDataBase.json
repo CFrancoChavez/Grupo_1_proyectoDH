@@ -1,102 +1,101 @@
 [
-   {
+  {
     "id": 1,
-    "firstName": "Paco",
+    "name": "Paco",
     "lastName": "Perez",
     "email": "pacoperez@email.com",
     "password": "paco1234",
     "category": "User",
-    "image": "imagen.jpg"
-
-   },
-   {
+    "avatar": "imagen.jpg"
+  },
+  {
     "id": 2,
-    "firstName": "Juan",
+    "name": "Juan",
     "lastName": "Ramirez",
     "email": "juanramirez@email.com",
     "password": "juan1234",
     "category": "User",
-    "image":"imagen.jpg"
-
-   },
-   {
+    "avatar": "imagen.jpg"
+  },
+  {
     "id": 3,
-    "firstName": "Emiliano",
+    "name": "Emiliano",
     "lastName": "Sanchez",
     "email": "emilianosanchez@email.com",
     "password": "emiliano.jpg",
     "category": "User",
-    "image": "imagen.jpg"
-
-   },
-   {
+    "avatar": "imagen.jpg"
+  },
+  {
     "id": 4,
-    "firstName": "Paula",
+    "name": "Paula",
     "lastName": "Cabrera",
     "email": "paulacabrera@email.com",
     "password": "paulacabrera@email.com",
     "category": "User",
-    "image": "imagen.jpg"
-
-   },
-   {
+    "avatar": "imagen.jpg"
+  },
+  {
     "id": 5,
-    "firstName": "Gregory",
+    "name": "Gregory",
     "lastName": "Peck",
     "email": "gregorypeck@email.com",
     "password": "gregory1234",
     "category": "User",
-    "image": "imagen.jpg"
-
-   },
-   {
+    "avatar": "imagen.jpg"
+  },
+  {
     "id": 6,
-    "firstName": "Magdalena",
+    "name": "Magdalena",
     "lastName": "Ruiz",
     "email": "magdalenaruiz@email.com",
     "password": "magdalena1234",
     "category": "User",
-    "image": "imagen.jpg"
-
-   },
-   {
+    "avatar": "imagen.jpg"
+  },
+  {
     "id": 7,
-    "firstName": "Juan",
+    "name": "Juan",
     "lastName": "Gabriel",
     "email": "juangabriel@email.com",
     "password": "juanga1234",
     "category": "User",
-    "image": "imagen.jpg"
-
-   },
-   {
+    "avatar": "imagen.jpg"
+  },
+  {
     "id": 8,
-    "firstName": "Roberto",
+    "name": "Roberto",
     "lastName": "Gomez",
     "email": "chavodelocho@email.com",
     "password": "elchavo1234",
     "category": "User",
-    "image": "imagen.jpg"
-
-   },
-   {
+    "avatar": "imagen.jpg"
+  },
+  {
     "id": 9,
-    "firstName": "Guy",
+    "name": "Guy",
     "lastName": "Williams",
     "email": "elzorro@email.com",
     "password": "zorro1234",
     "category": "User",
-    "image": "imagen.jpg"
-
-   },
-   {
+    "avatar": "imagen.jpg"
+  },
+  {
     "id": 10,
-    "firstName": "Joe",
+    "name": "Joe",
     "lastName": "Catwright",
     "email": "bonanza@email.com",
     "password": "bonanza1234",
     "category": "User",
-    "image": "imagen.jpg"
-
-   }
+    "avatar": "imagen.jpg"
+  },
+  {
+    "id": 11,
+    "name": "fede",
+    "lastName": "garcia",
+    "email": "fede@fede.com",
+    "phone": "12345678",
+    "password": "123456",
+    "avatar": "user1660786395270.jpeg"
+  }
 ]

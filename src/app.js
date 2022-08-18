@@ -7,9 +7,10 @@ const app = express();
 const methodOverride =  require('method-override');
 const mainRouter = require("./routers/mainRouters");
 const routerDeProductos = require('./routers/productsRouter');
-const routerUsers= require('./routers/userRouter');
+const usuariosRouter = require('./routers/userRouter');
+/* const routerUsers= require('./routers/userRouter');
 const registerRouter = require('./routers/registerRouter');
-const usuariosRouter = require('./routers/usuariosRouter'); //nuevo código Konrad
+  *///nuevo código Konrad
 
 
 const PORT = process.env.PORT || 3000;
@@ -22,11 +23,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
-app.use("/", mainRouter);
 app.use('/productos', routerDeProductos);
-app.use('/formulariologin', routerUsers);
+app.use('/usuarios', usuariosRouter);
+app.use("/", mainRouter);
+/* app.use('/formulariologin', routerUsers);
 app.use('/formulario', registerRouter);
-app.use('/usuarios', usuariosRouter); //nuevo código Konrad
+ //nuevo código Konrad */
+/*  */
 
 
 

@@ -1,128 +1,137 @@
 [
-    {
-      "id": 1,
-      "name": "Nike 1",
-      "price": "100",
-      "discount": "50",
-      "category": "visited",
-      "description": "Maximo confort",
-      "image": "zapa 1.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Adidas ADV",
-      "price": 500,
-      "discount": 3,
-      "category": "in-sale",
-      "description": "Calidad y diseño",
-      "image": "zapa 2.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Topper Max",
-      "price": 729,
-      "discount": 25,
-      "category": "in-sale",
-      "description": "Pensada para vos",
-      "image": "zapa 3.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Salomon",
-      "description": "Dejando huella, ideal para senderismo",
-      "price": 4790,
-      "discount": 10,
-      "image": "zapa 4.jpg",
-      "category": "in-sale"
-    },
-    {
-      "id": 5,
-      "name": "Nike Air",
-      "description": "Tu mejor elección para cualquier actividad",
-      "price": 5300,
-      "discount": 20,
-      "image": "zapa 5.jpg",
-      "category": "in-sale"
-    },
-    {
-      "id": 6,
-      "name": "Reebook Infinity",
-      "description": "Ideales para entrenamiento de alto impacto",
-      "price": 999,
-      "discount": 12,
-      "image": "zapa 6.jpg",
-      "category": "in-sale"
-    },
-    {
-      "id": 7,
-      "name": "Nike 300",
-      "description": "Para un estilo de vida activo",
-      "price": 3500,
-      "discount": 5,
-      "image": "zapa 7.jpg",
-      "category": "in-sale"
-    },
-    {
-      "id": 8,
-      "name": "Adidas Classic",
-      "description": "Indispensables para la vida diaria",
-      "price": 4000,
-      "discount": 2,
-      "image": "zapa 8.jpg",
-      "category": "in-sale"
-    },
-    {
-      "id": 9,
-      "name": "Adidas Top Court",
-      "description": "Comodidad y estilo",
-      "price": 11399,
-      "discount": 0,
-      "image": "zapa 9.jpg",
-      "category": "visited"
-    },
-    {
-      "id": 10,
-      "name": "Puma Incite",
-      "description": "Para un entrenamiento de alto rendimiento",
-      "price": 1200,
-      "discount": 10,
-      "image": "zapa 10.jpg",
-      "category": "visited"
-    },
-    {
-      "id": 11,
-      "name": "Nike Air Max 97",
-      "description": "Un producto único de la mejor calidad",
-      "price": 32990,
-      "discount": 0,
-      "image": "zapa 11.jpg",
-      "category": "visited"
-    },
-    {
-      "id": 12,
-      "name": "Nike Air Zoom Pegasus",
-      "description": "Ideales para correr grandes distancias",
-      "price": 34990,
-      "discount": 0,
-      "image": "zapa 12.jpg",
-      "category": "visited"
-    },
-    {
-      "id": 13,
-      "name": "Adidas Bounce Running",
-      "description": "Disfruta de la comodidad mientras te ejercitas",
-      "price": 10999,
-      "discount": 5,
-      "image": "zapa 13.jpg",
-      "category": "visited"
-    },
-    {
-      "id": 14,
-      "name": "Reebok Zig Dynamica",
-      "description": "El mejor estilo y la mejor calidad para cualquier ocasión",
-      "price": 15979,
-      "discount": 12,
-      "image": "zapa 14.jpg",
-      "category": "visited"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Nike 1",
+    "price": "100",
+    "discount": "50",
+    "category": "visited",
+    "description": "Maximo confort",
+    "image": "zapa 1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Adidas ADV",
+    "price": 500,
+    "discount": 3,
+    "category": "in-sale",
+    "description": "Calidad y diseño",
+    "image": "zapa 2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Topper Max",
+    "price": 729,
+    "discount": 25,
+    "category": "in-sale",
+    "description": "Pensada para vos",
+    "image": "zapa 3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Salomon",
+    "description": "Dejando huella, ideal para senderismo",
+    "price": 4790,
+    "discount": 10,
+    "image": "zapa 4.jpg",
+    "category": "in-sale"
+  },
+  {
+    "id": 5,
+    "name": "Nike Air",
+    "description": "Tu mejor elección para cualquier actividad",
+    "price": 5300,
+    "discount": 20,
+    "image": "zapa 5.jpg",
+    "category": "in-sale"
+  },
+  {
+    "id": 6,
+    "name": "Reebook Infinity",
+    "description": "Ideales para entrenamiento de alto impacto",
+    "price": 999,
+    "discount": 12,
+    "image": "zapa 6.jpg",
+    "category": "in-sale"
+  },
+  {
+    "id": 7,
+    "name": "Nike 300",
+    "description": "Para un estilo de vida activo",
+    "price": 3500,
+    "discount": 5,
+    "image": "zapa 7.jpg",
+    "category": "in-sale"
+  },
+  {
+    "id": 8,
+    "name": "Adidas Classic",
+    "description": "Indispensables para la vida diaria",
+    "price": 4000,
+    "discount": 2,
+    "image": "zapa 8.jpg",
+    "category": "in-sale"
+  },
+  {
+    "id": 9,
+    "name": "Adidas Top Court",
+    "description": "Comodidad y estilo",
+    "price": 11399,
+    "discount": 0,
+    "image": "zapa 9.jpg",
+    "category": "visited"
+  },
+  {
+    "id": 10,
+    "name": "Puma Incite",
+    "description": "Para un entrenamiento de alto rendimiento",
+    "price": 1200,
+    "discount": 10,
+    "image": "zapa 10.jpg",
+    "category": "visited"
+  },
+  {
+    "id": 11,
+    "name": "Nike Air Max 97",
+    "description": "Un producto único de la mejor calidad",
+    "price": 32990,
+    "discount": 0,
+    "image": "zapa 11.jpg",
+    "category": "visited"
+  },
+  {
+    "id": 12,
+    "name": "Nike Air Zoom Pegasus",
+    "description": "Ideales para correr grandes distancias",
+    "price": 34990,
+    "discount": 0,
+    "image": "zapa 12.jpg",
+    "category": "visited"
+  },
+  {
+    "id": 13,
+    "name": "Adidas Bounce Running",
+    "description": "Disfruta de la comodidad mientras te ejercitas",
+    "price": 10999,
+    "discount": 5,
+    "image": "zapa 13.jpg",
+    "category": "visited"
+  },
+  {
+    "id": 14,
+    "name": "Reebok Zig Dynamica",
+    "description": "El mejor estilo y la mejor calidad para cualquier ocasión",
+    "price": 15979,
+    "discount": 12,
+    "image": "zapa 14.jpg",
+    "category": "visited"
+  },
+  {
+    "id": 15,
+    "name": "asdasda",
+    "price": "22",
+    "discount": "22",
+    "category": "in-sale",
+    "description": "asdasd",
+    "image": "product_image_1660785096881.jpeg"
+  }
+]

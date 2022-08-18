@@ -1,0 +1,7 @@
+1. Vincular el ejs con formulario
+2. CRUD
+3. Mostrar la vista de usuario ---listo
+4. Que el login redirija al ejs de usuario ---listo
+5. Aplicar el CRUD a los productos
+
+Botón de editar y eliminar para ejs de usuario

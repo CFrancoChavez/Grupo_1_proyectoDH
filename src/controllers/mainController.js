@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 
 /*const menuDbPath = path.join(__dirname, "../db/platos.json");*/
 
@@ -16,6 +17,9 @@ const controller = {
 
         return res.render("home" )
     },
+    search: (req, res) => {
+		res.render('results')
+	},
     
 
     //detalle: (req, res) => {

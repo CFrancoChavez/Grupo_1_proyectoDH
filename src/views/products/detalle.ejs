@@ -9,16 +9,18 @@
             <div class="detalleproducto">
 
                 <section class="imagenproducto">
-                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    <img src= "/images/<%= productoEncontrado.image %>"
                         width="600px" alt="">
                 </section>
+                
                 <div class="detallezapatilla">
-                    <p>NOMBRE ZAPATILLA</p>
-                    <p class="textozapatilla">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic quam placeat
-                        voluptate corporis iure incidunt architecto! Iure veniam necessitatibus, id laudantium magni
-                        officiis perferendis blanditiis quo soluta animi dolorum cumque.</p>
-                    <p class="preciozapatillas">$0,00</p>
+                    <p><%= productoEncontrado.name %></p> <!--nuevo código Konrad-->
+                    <p class="textozapatilla"><%= productoEncontrado.description %></p> <!--nuevo código Konrad-->
+                    <p class="preciozapatillas"><%= productoEncontrado.price %></p> <!--nuevo código Konrad-->
                     <div class="controlesproducto">
+
+                        
+
                         <i class="fas fa-plus-circle"></i><span class="numeroproductos"> 1 </span><i
                             class="fas fa-minus-circle"></i><input class="botonagregar" type="submit" value="AGREGAR">
                         <div class="divtalle">
@@ -28,6 +30,7 @@
                             <p class="talle">41</p>
                             <p class="talle">42</p>
                         </div>
+                        
                     </div>
 
 
@@ -38,6 +41,7 @@
                         <p class="color4">41</p>
                         <p class="color5">42</p>
                     </div>
+                    <div class="creacionproducto"><li><a  class="creacionproductotexto" href="/productos/products_create_form">Crear/Editar producto</a></li></div>
 
 
 
@@ -56,7 +60,7 @@
             <section class="parrafoinferior">
 
                 <p class="titulardesc">
-                <h3>DESCRIPCION</h3>
+                <h3></h3>
                 </p>
                 <div>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci nesciunt molestias sint sequi

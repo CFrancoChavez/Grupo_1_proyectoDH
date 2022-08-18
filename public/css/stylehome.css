@@ -28,12 +28,9 @@ header{
     height: 138px;
 }
 
-<<<<<<< HEAD
 .logo:hover{
     opacity: calc(.5);
 }
-=======
->>>>>>> 3d34ddf0f4cd38b24f750c113f8b1351a352ca39
 /*.logo img:hover{
     opacity: .5;
 }*/
@@ -122,6 +119,13 @@ nav ul .fas:hover{
     color: white;
 }
 
+.fa-user {
+
+    font-size: 30px;
+  
+
+}
+
 .fa-whatsapp:hover{
     transform: scale(1.5);
     transition: 180ms;
@@ -206,6 +210,78 @@ main .portada img{
     flex-wrap: wrap;
     margin-left: 20%
 }
+/*Productos------------------------------------------------------------*/
+
+
+div.containerproductos{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 20px;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+div.imagem{
+    width: 10%;
+    height: 10%;
+}
+
+div.detailsproductos{
+    margin-right: 15px;
+    background-color: #333;
+    margin-bottom: 50px;
+    height: 20%;
+}
+
+div.contentproductos{
+    margin-left: 20px;
+    color: white;
+    padding: 10px;
+    
+}
+
+div.botondetalle a{
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+
+}
+
+div.botondetalle{
+    text-align: end;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+div.botondetalle:hover{
+    transform: scale(1.02);
+}
+
+div.botondetalle a:hover{
+    background-color: #f54d40;
+}
+/*div.containerproductos{
+    
+
+.details{
+    width:40%;
+    height: 500px;
+    background-color: aquamarine;
+    
+   
+}
+.content{
+    width:60%;
+    height: 500px;
+    background-color:lightcoral;
+   
+}*/
 
 
 /*Carrito de compra------------------------------------------------------------*/
@@ -443,6 +519,27 @@ input.contraseña {
     flex-wrap: wrap;
     justify-content: space-between;
     justify-content: center;
+}
+
+div.creacionproducto{
+    color: white;
+    background-color: #333235;
+    padding: 5px;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+div.creacionproducto:hover{
+    transform: scale(1.1);
+    background-color: white;
+}
+
+a.creacionproductotexto{
+    color: tomato;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 .imagenproducto{

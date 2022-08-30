@@ -133,5 +133,23 @@
     "category": "in-sale",
     "description": "asdasd",
     "image": "product_image_1660785096881.jpeg"
+  },
+  {
+    "id": 16,
+    "name": "compu dell",
+    "price": "10000",
+    "discount": "0",
+    "category": "in-sale",
+    "description": "la mejor",
+    "image": "product_image_1661634193731.jpeg"
+  },
+  {
+    "id": 17,
+    "name": "",
+    "price": "",
+    "discount": "",
+    "category": "",
+    "description": "",
+    "image": "default-image.png"
   }
 ]

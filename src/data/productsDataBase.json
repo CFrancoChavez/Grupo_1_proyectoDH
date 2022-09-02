@@ -124,14 +124,5 @@
     "discount": 12,
     "image": "zapa 14.jpg",
     "category": "visited"
-  },
-  {
-    "id": 15,
-    "name": "asdasda",
-    "price": "22",
-    "discount": "22",
-    "category": "in-sale",
-    "description": "asdasd",
-    "image": "product_image_1660785096881.jpeg"
   }
 ]

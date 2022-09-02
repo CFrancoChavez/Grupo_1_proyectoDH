@@ -59,7 +59,7 @@ const controller = {
 	edit: (req, res) => {
 		const products = readJsonFile(productsFilePath)
 		const product = products.find(product => product.id == req.params.id)
-		res.render('product-edit-form', { product });
+		res.render('products/product_edit_form', { product });
 	},
 	// Update - Method to update
 	update: (req, res) => {

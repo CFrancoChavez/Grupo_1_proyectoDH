@@ -115,14 +115,5 @@
     "discount": 5,
     "image": "zapa 13.jpg",
     "category": "visited"
-  },
-  {
-    "id": 14,
-    "name": "Reebok Zig Dynamica",
-    "description": "El mejor estilo y la mejor calidad para cualquier ocasión",
-    "price": 15979,
-    "discount": 12,
-    "image": "zapa 14.jpg",
-    "category": "visited"
   }
 ]

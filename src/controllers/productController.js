@@ -57,8 +57,10 @@ const controller = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
+		//return res.json(req.params) para ver si llega el id
 		const products = readJsonFile(productsFilePath)
 		const product = products.find(product => product.id == req.params.id)
+	
 		res.render('products/product_edit_form', { product });
 	},
 	// Update - Method to update
@@ -79,7 +81,7 @@ const controller = {
 			}
 		};
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-		return res.redirect("/products");
+		return res.redirect("/productos");
 	},
 
 	// Delete - Delete one product from DB
@@ -88,7 +90,7 @@ const controller = {
 		const productosFiltrados = products.filter(product => product.id != req.params.id);
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(productosFiltrados, null, 2));
-		return res.redirect("/products");
+		return res.redirect("/productos");
 	}
 
 

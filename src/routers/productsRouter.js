@@ -9,6 +9,6 @@ router.get("/detalle/:id",controladorPrincipal.detalleProducto);
 router.get('/carrito',controladorPrincipal.carro);
 router.get('/crear',controladorPrincipal.crearProducto);
 router.post('/crear', upload.single("productImage"), controladorPrincipal.store);
-router.get('/editar/:id',controladorPrincipal.edit);
-router.put('/crear/:id', upload.single("productImage"), controladorPrincipal.update)
+router.get('/:id/editar',controladorPrincipal.edit);
+router.put('/:id', upload.single("productImage"), controladorPrincipal.update)
 module.exports = router; 

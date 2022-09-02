@@ -10,11 +10,11 @@
   },
   {
     "id": 2,
-    "name": "Adidas ADV",
-    "price": 500,
-    "discount": 3,
+    "name": "adidas",
+    "price": "10000",
+    "discount": "0",
     "category": "in-sale",
-    "description": "Calidad y diseño",
+    "description": "buena",
     "image": "zapa 2.jpg"
   },
   {

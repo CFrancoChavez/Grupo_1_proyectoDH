@@ -12,7 +12,7 @@
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
 						<label for="name" class="form-label">Nombre del producto:</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="controls">
+						<input type="text" id="name" name="name" value="<%=product.name%>" placeholder="Ej: Zapatillas Reebok" class="controls">
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="price" class="form-label">Precio del producto:</label>
@@ -42,6 +42,9 @@
 						<button type="submit" class="button">Editar producto</button>
 					</div>
 				</div>
+			</form>
+			<form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+				<button type="submit" class="action-button delete">ELIMINAR</button>
 			</form>
 		</div>
 

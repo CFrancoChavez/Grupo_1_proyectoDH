@@ -26,12 +26,6 @@ app.use(methodOverride('_method'));
 app.use('/productos', routerDeProductos);
 app.use('/usuarios', usuariosRouter);
 app.use("/", mainRouter);
-/* app.use('/formulariologin', routerUsers);
-app.use('/formulario', registerRouter);
- //nuevo código Konrad */
-/*  */
-
-
 
 app.listen(PORT, () => console.log("Servidor corriendo en el puerto: " + PORT));
 

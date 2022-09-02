@@ -17,6 +17,7 @@ const controller = {
 
         return res.render("home")
     },
+    
     search: (req, res) => {
 		res.render('results')
 	},

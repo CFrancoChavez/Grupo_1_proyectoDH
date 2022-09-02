@@ -115,41 +115,5 @@
     "discount": 5,
     "image": "zapa 13.jpg",
     "category": "visited"
-  },
-  {
-    "id": 14,
-    "name": "Reebok Zig Dynamica",
-    "description": "El mejor estilo y la mejor calidad para cualquier ocasión",
-    "price": 15979,
-    "discount": 12,
-    "image": "zapa 14.jpg",
-    "category": "visited"
-  },
-  {
-    "id": 15,
-    "name": "asdasda",
-    "price": "22",
-    "discount": "22",
-    "category": "in-sale",
-    "description": "asdasd",
-    "image": "product_image_1660785096881.jpeg"
-  },
-  {
-    "id": 16,
-    "name": "compu dell",
-    "price": "10000",
-    "discount": "0",
-    "category": "in-sale",
-    "description": "la mejor",
-    "image": "product_image_1661634193731.jpeg"
-  },
-  {
-    "id": 17,
-    "name": "",
-    "price": "",
-    "discount": "",
-    "category": "",
-    "description": "",
-    "image": "default-image.png"
   }
 ]

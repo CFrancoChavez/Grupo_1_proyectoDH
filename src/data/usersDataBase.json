@@ -1,101 +1,101 @@
 [
-  {
-    "id": 1,
-    "name": "Paco",
-    "lastName": "Perez",
-    "email": "pacoperez@email.com",
-    "password": "paco1234",
-    "category": "User",
-    "avatar": "imagen.jpg"
-  },
-  {
-    "id": 2,
-    "name": "Juan",
-    "lastName": "Ramirez",
-    "email": "juanramirez@email.com",
-    "password": "juan1234",
-    "category": "User",
-    "avatar": "imagen.jpg"
-  },
-  {
-    "id": 3,
-    "name": "Emiliano",
-    "lastName": "Sanchez",
-    "email": "emilianosanchez@email.com",
-    "password": "emiliano.jpg",
-    "category": "User",
-    "avatar": "imagen.jpg"
-  },
-  {
-    "id": 4,
-    "name": "Paula",
-    "lastName": "Cabrera",
-    "email": "paulacabrera@email.com",
-    "password": "paulacabrera@email.com",
-    "category": "User",
-    "avatar": "imagen.jpg"
-  },
-  {
-    "id": 5,
-    "name": "Gregory",
-    "lastName": "Peck",
-    "email": "gregorypeck@email.com",
-    "password": "gregory1234",
-    "category": "User",
-    "avatar": "imagen.jpg"
-  },
-  {
-    "id": 6,
-    "name": "Magdalena",
-    "lastName": "Ruiz",
-    "email": "magdalenaruiz@email.com",
-    "password": "magdalena1234",
-    "category": "User",
-    "avatar": "imagen.jpg"
-  },
-  {
-    "id": 7,
-    "name": "Juan",
-    "lastName": "Gabriel",
-    "email": "juangabriel@email.com",
-    "password": "juanga1234",
-    "category": "User",
-    "avatar": "imagen.jpg"
-  },
-  {
-    "id": 8,
-    "name": "Roberto",
-    "lastName": "Gomez",
-    "email": "chavodelocho@email.com",
-    "password": "elchavo1234",
-    "category": "User",
-    "avatar": "imagen.jpg"
-  },
-  {
-    "id": 9,
-    "name": "Guy",
-    "lastName": "Williams",
-    "email": "elzorro@email.com",
-    "password": "zorro1234",
-    "category": "User",
-    "avatar": "imagen.jpg"
-  },
-  {
-    "id": 10,
-    "name": "Joe",
-    "lastName": "Catwright",
-    "email": "bonanza@email.com",
-    "password": "bonanza1234",
-    "category": "User",
-    "avatar": "imagen.jpg"
-  },
-  {
-    "id": 11,
-    "name": "fede",
-    "lastName": "garcia",
-    "email": "fede@fede.com",
-    "phone": "12345678",
-    "password": "123456",
-    "avatar": "user1660786395270.jpeg"
-  }
+ {
+  "id": 1,
+  "name": "Paco",
+  "lastName": "Perez",
+  "email": "pacoperez@email.com",
+  "password": "paco1234",
+  "category": "User",
+  "avatar": "imagen.jpg"
+ },
+ {
+  "id": 2,
+  "name": "Juan",
+  "lastName": "Ramirez",
+  "email": "juanramirez@email.com",
+  "password": "juan1234",
+  "category": "User",
+  "avatar": "imagen.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Emiliano",
+  "lastName": "Sanchez",
+  "email": "emilianosanchez@email.com",
+  "password": "emiliano.jpg",
+  "category": "User",
+  "avatar": "imagen.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Paula",
+  "lastName": "Cabrera",
+  "email": "paulacabrera@email.com",
+  "password": "paulacabrera@email.com",
+  "category": "User",
+  "avatar": "imagen.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Gregory",
+  "lastName": "Peck",
+  "email": "gregorypeck@email.com",
+  "password": "gregory1234",
+  "category": "User",
+  "avatar": "imagen.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Magdalena",
+  "lastName": "Ruiz",
+  "email": "magdalenaruiz@email.com",
+  "password": "magdalena1234",
+  "category": "User",
+  "avatar": "imagen.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Juan",
+  "lastName": "Gabriel",
+  "email": "juangabriel@email.com",
+  "password": "juanga1234",
+  "category": "User",
+  "avatar": "imagen.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Roberto",
+  "lastName": "Gomez",
+  "email": "chavodelocho@email.com",
+  "password": "elchavo1234",
+  "category": "User",
+  "avatar": "imagen.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Guy",
+  "lastName": "Williams",
+  "email": "elzorro@email.com",
+  "password": "zorro1234",
+  "category": "User",
+  "avatar": "imagen.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Joe",
+  "lastName": "Catwright",
+  "email": "bonanza@email.com",
+  "password": "bonanza1234",
+  "category": "User",
+  "avatar": "imagen.jpg"
+ },
+ {
+  "id": 11,
+  "name": "fede",
+  "lastName": "garcia",
+  "email": "fede@fede.com",
+  "phone": "12345678",
+  "password": "123456",
+  "avatar": "user1660786395270.jpeg"
+ }
 ]

@@ -2,7 +2,66 @@ const fs = require("fs");
 const path = require("path");
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 
-const readJsonFile = (path) => {
+const User = require('../models/User') //nuevo código --konrad
+const { validationResult }= require('express-validator') //nuevo código express validator --konrad
+
+
+
+const controller = {
+
+    loginForm: (req, res) => {
+        // Mostrar el formulario de login
+        return res.render("formularioLoginUsuario");
+    },
+    processLogin: (req, res) => {
+        // Recibir la info del formulario de login y almacenar en un storage
+
+    },
+    registerForm: (req, res) => {
+        // Mostrar el formulario de registro
+        return res.render("formularioRegistroUsuario");
+    },
+
+    //modificación en el código para express validator --konrad
+    processForm: (req, res) => {
+        // Procesar el formulario de registro
+      const resultValidation = validationResult(req);
+     
+      if(resultValidation.errors.length > 0) {
+        return res.render("formularioRegistroUsuario", {
+            errors: resultValidation.mapped(),
+            oldData: req.body
+        });
+      }
+      return res.send('OKKKKK')
+    }
+
+}
+
+
+module.exports = controller;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const readJsonFile = (path) => {
     const data = fs.readFileSync(path, "utf-8");
     const dataParsed = JSON.parse(data);
     return dataParsed;
@@ -13,8 +72,11 @@ const controller = {
         return res.render("formularioLoginUsuario");
     },
 
+
+    //nuevo código Konrad 
     processLogin: (req, res) => {
         // Recibir la info del formulario de login y almacenar en un storage
+        //let userToLogin = 
 
     },
 
@@ -77,3 +139,4 @@ proceso de eliminar un producto.
 
 
 */
+

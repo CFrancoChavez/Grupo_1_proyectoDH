@@ -871,3 +871,10 @@ a.creacionproductotexto{
     }
 
 }
+
+/*Texto de validación------------------------------------------------------------*/
+
+.text-danger {
+    color: red;
+}
+

@@ -1,101 +1,22 @@
 [
  {
   "id": 1,
-  "name": "Paco",
-  "lastName": "Perez",
-  "email": "pacoperez@email.com",
-  "password": "paco1234",
-  "category": "User",
-  "avatar": "imagen.jpg"
+  "name": "John ",
+  "lastName": "Doe",
+  "email": "johndoe@email.com",
+  "phone": "",
+  "password": "$2a$10$YSqAe9rkIKzN4OsgsGPFbOe5hHzT0VCyaqBUgSbdrpPZXt6hBBdJu",
+  "password_confirm": "$2a$10$4KRIUWQuKJwvx9J2EZM7LeBBJdS0l1hRq5Q4eavv760nFGGhU2pkW",
+  "avatar": "1662272191938_img.jpg"
  },
  {
   "id": 2,
-  "name": "Juan",
-  "lastName": "Ramirez",
-  "email": "juanramirez@email.com",
-  "password": "juan1234",
-  "category": "User",
-  "avatar": "imagen.jpg"
- },
- {
-  "id": 3,
-  "name": "Emiliano",
-  "lastName": "Sanchez",
-  "email": "emilianosanchez@email.com",
-  "password": "emiliano.jpg",
-  "category": "User",
-  "avatar": "imagen.jpg"
- },
- {
-  "id": 4,
-  "name": "Paula",
-  "lastName": "Cabrera",
-  "email": "paulacabrera@email.com",
-  "password": "paulacabrera@email.com",
-  "category": "User",
-  "avatar": "imagen.jpg"
- },
- {
-  "id": 5,
-  "name": "Gregory",
-  "lastName": "Peck",
-  "email": "gregorypeck@email.com",
-  "password": "gregory1234",
-  "category": "User",
-  "avatar": "imagen.jpg"
- },
- {
-  "id": 6,
-  "name": "Magdalena",
-  "lastName": "Ruiz",
-  "email": "magdalenaruiz@email.com",
-  "password": "magdalena1234",
-  "category": "User",
-  "avatar": "imagen.jpg"
- },
- {
-  "id": 7,
-  "name": "Juan",
-  "lastName": "Gabriel",
-  "email": "juangabriel@email.com",
-  "password": "juanga1234",
-  "category": "User",
-  "avatar": "imagen.jpg"
- },
- {
-  "id": 8,
-  "name": "Roberto",
-  "lastName": "Gomez",
-  "email": "chavodelocho@email.com",
-  "password": "elchavo1234",
-  "category": "User",
-  "avatar": "imagen.jpg"
- },
- {
-  "id": 9,
-  "name": "Guy",
-  "lastName": "Williams",
-  "email": "elzorro@email.com",
-  "password": "zorro1234",
-  "category": "User",
-  "avatar": "imagen.jpg"
- },
- {
-  "id": 10,
-  "name": "Joe",
-  "lastName": "Catwright",
-  "email": "bonanza@email.com",
-  "password": "bonanza1234",
-  "category": "User",
-  "avatar": "imagen.jpg"
- },
- {
-  "id": 11,
-  "name": "fede",
-  "lastName": "garcia",
-  "email": "fede@fede.com",
-  "phone": "12345678",
-  "password": "123456",
-  "avatar": "user1660786395270.jpeg"
+  "name": "Tony",
+  "lastName": "Stark",
+  "email": "iamironman@avengers.com",
+  "phone": "",
+  "password": "$2a$10$UlY2kRz/Kt4a2L2VorgjTOQQo/oOZtND491ds4/DeWnwBSQLDBH0q",
+  "password_confirm": "$2a$10$4RQbG4ng0lfCr4b/kVnYDeksidreR5aHUFgVPWaE8LCzygYGgmWgW",
+  "avatar": "1662272374637_img.jpg"
  }
 ]

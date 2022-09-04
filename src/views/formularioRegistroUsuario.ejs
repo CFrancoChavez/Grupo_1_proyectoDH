@@ -50,12 +50,23 @@
                     <% } %>
                 <input class="controls" type="password" name="password" value="<%= locals.oldData ? oldData.password : null %>" placeholder="Ingrese su contraseña">
 
-
+                <% if(locals.errors && errors.password_confirm) { %>
+                    <div class="text-danger">
+                        <%= errors.password_confirm.msg %>
+                    </div>
+                    <% } %>
                 <input class="controls" type="password" name="password_confirm" placeholder="Confirme su contraseña">
+
+
+                    <!-- validation para contraseña --konrad -->
+                    <% if(locals.errors && errors.imagenUsuario) { %>
+                        <div class="text-danger">
+                            <%= errors.imagenUsuario.msg %>
+                        </div>
+                        <% } %>
                 <input class="controls" type="file" name="imagenUsuario" placeholder="elegirImagen">
                 <input class="button" type="submit" value="CREAR CUENTA">
-                <a href="/formulariologin"><input class="button" type="submit" value="LOGIN"></a>
-                </form> 
+               
                 <a href="/usuarios/login"><input class="button" type="submit" value="LOGIN"></a>
 
             </section>

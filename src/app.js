@@ -8,9 +8,7 @@ const methodOverride =  require('method-override');
 const mainRouter = require("./routers/mainRouters");
 const routerDeProductos = require('./routers/productsRouter');
 const usuariosRouter = require('./routers/userRouter');
-/* const routerUsers= require('./routers/userRouter');
-const registerRouter = require('./routers/registerRouter');
-  *///nuevo código Konrad
+const session = require('express-session'); //nuevo código session --konrad
 
 
 const PORT = process.env.PORT || 3000;
@@ -22,6 +20,11 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(session({
+  secret: 'Keep the secret',
+  resave: false,
+  saveUninitialized: false
+}));
 
 app.use('/productos', routerDeProductos);
 app.use('/usuarios', usuariosRouter);

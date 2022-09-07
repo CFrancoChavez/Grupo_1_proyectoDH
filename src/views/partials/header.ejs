@@ -1,36 +1,73 @@
-
 <header>
-    
+
     <div class="logo">
-        <a href="/"><img src="/images/Logo1.png" width="360px" alt="Logo"></a> 
+        <a href="/"><img src="/images/Logo1.png" width="360px" alt="Logo"></a>
     </div>
     <div class="caja">
         <i class="fa fa-search"></i>
         <input type="text" placeholder="Buscar productos">
     </div>
 
-    
-        <nav class="navegacion">
+
+    <nav class="navegacion">
+
+        <ul>
+
+            <li><i class="fab fa-whatsapp"></i></li>
             
-            <ul>
+            <li><a href="/productos">Productos</a></li>
+            
+            <li><a href="/productos/carrito">Carrito de compra</a><i class="fas fa-shopping-basket"></i>
+            </li>
+            
+            
+            
+            
+            
+                <% if (locals.isLogged) { %>
+                <!--barra de navegación para sesión iniciada // nuevo código Konrad-->
                 
-                <li><i class="fab fa-whatsapp"></i></li>
-                <!--<li><a href="/formulariologin">Login</a><i class="fas fa-address-card"></i></li>--> <!--nuevo código Konrad-->
-                <li><a href="/usuarios/registro">Creá tu cuenta</a><i class="fas fa-sign-in-alt"></i></li>
-                <li><a href="/productos">Productos</a><i class="fas fa-address-card"></i></li>
-                <li><a href="/productos/carrito">Carrito de compra</a><i class="fas fa-shopping-basket"></i></li>
+
+                    <div class="barraUsuario">
+                        <li><a href="/usuarios/login"><i class="far fa-user"></i></a></li>
+                        
+                        <div class="navbar">
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn"><%= locals.userLogged.name %> 
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            
+                            <div class="dropdown-content">
+                                <a href="/usuarios/detalleusuario">Perfil</a>
+                                <a href="/usuarios/logout">Salir</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="/profileImages/<%= locals.userLogged.avatar %>" width="50px" alt="50px" style="border-radius: 100%">
+                    </div>
+                    
+               
+                    <!--------------------------------------------------------------------->
+                    
+                    <% } else { %>
+                        <!--barra de navegación para usuario sin sesión // nuevo código Konrad-->
+                        <li><a href="/usuarios/registro">Creá tu cuenta</a><i class="fas fa-sign-in-alt"></i></li>
+                    <li><a href="/usuarios/login">Login</a><i class="fas fa-address-card"></i></li>
+                    <!--------------------------------------------------------------------->
+                    <% } %>
 
 
-                <li><a href="/usuarios/login"><i class="far fa-user"></i></a></li> <!--nuevo código Konrad-->
-                
-            </ul>
-            
-            
-        </nav>
-        <div class="burgermenu">
-            <i class="fas fa-bars"></i>
-        </div>
-        
-        <p class="division">
-        </p>
+
+        </ul>
+
+
+    </nav>
+    <div class="burgermenu">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <p class="division">
+    </p>
 </header>

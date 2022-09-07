@@ -6,6 +6,7 @@ const userController = require("../controllers/userController");
 const multer = require('multer'); //nuevo código de multer para usuarios -- konrad
 const { body } = require('express-validator');//nuevo código express validator --konrad
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 
 
@@ -66,7 +67,7 @@ const validations = [
 
 
 //mostrar la vista del login
-router.get('/login', userController.loginForm);
+router.get('/login', guestMiddleware, userController.loginForm);
 
 //procesar el login
 router.post('/login', userController.processLogin);
@@ -78,7 +79,10 @@ router.get('/registro', guestMiddleware, userController.registerForm); //nuevo c
 router.post('/registro', uploadFile.single('imagenUsuario'), validations, userController.processForm);
 
 //detalle de usuario 
-router.get('/detalleusuario', userController.userDetail);
+router.get('/detalleusuario', authMiddleware, userController.userDetail);
+
+//proceso de logout
+router.get('/logout', userController.logout);
 
 
 

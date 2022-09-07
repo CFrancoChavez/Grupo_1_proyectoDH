@@ -25,6 +25,12 @@ const controller = {
             if(passwordOk) {
                 delete userToLog.password;
                 req.session.userLogged = userToLog;
+
+                //nuevo condicional para cookies recordar usuario --konrad
+                    if(req.body.remember_user) {
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2})
+                    }
+
                 return res.redirect('/usuarios/detalleusuario')
             }
             return res.render('formularioLoginUsuario', {
@@ -98,6 +104,11 @@ const controller = {
 
       let userCreated = User.create(userToCreate);
       return res.redirect('/usuarios/login')
+    },
+
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/')
     }
 
   

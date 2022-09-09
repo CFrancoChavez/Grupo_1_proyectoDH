@@ -27,9 +27,9 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
+app.use(cookies()); //nuevo código cookies --konrad
 
 app.use(userLoggedMiddleware); //nuevo código mostrar enlaces de sesión --konrad
-app.use(cookies()); //nuevo código cookies --konrad
 app.use('/productos', routerDeProductos);
 app.use('/usuarios', usuariosRouter);
 app.use("/", mainRouter);

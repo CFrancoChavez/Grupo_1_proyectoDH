@@ -12,11 +12,13 @@ const controller = {
 
     loginForm: (req, res) => {
         // Mostrar el formulario de login
+        
         return res.render("formularioLoginUsuario");
     },
 
         //nuevo código --> procesamiento de login y verificación de contraseña con bcrypt --konrad
     processLogin: (req, res) => {
+    
         // Recibir la info del formulario de login y almacenar en un storage
         let userToLog = User.findByField('email', req.body.email);
         
@@ -27,10 +29,11 @@ const controller = {
                 req.session.userLogged = userToLog;
 
                 //nuevo condicional para cookies recordar usuario --konrad
-                    if(req.body.remember_user) {
-                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2})
-                    }
 
+                if (req.body.remember_user) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+                }
+                   
                 return res.redirect('/usuarios/detalleusuario')
             }
             return res.render('formularioLoginUsuario', {
@@ -53,6 +56,9 @@ const controller = {
 
       //nuevo código muestra la vista del detalle de usuario --konrad 
       userDetail: (req, res) => {
+
+       console.log(req.cookies.userEmail);
+
         return res.render('detalleUsuarios', {
             user: req.session.userLogged
         })
@@ -61,6 +67,7 @@ const controller = {
 
     registerForm: (req, res) => {
         // Mostrar el formulario de registro
+      
         return res.render("formularioRegistroUsuario");
     },
 
@@ -107,6 +114,7 @@ const controller = {
     },
 
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/')
     }

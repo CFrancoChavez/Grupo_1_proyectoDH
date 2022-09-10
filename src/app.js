@@ -9,6 +9,8 @@ const mainRouter = require("./routers/mainRouters");
 const routerDeProductos = require('./routers/productsRouter');
 const usuariosRouter = require('./routers/userRouter');
 const session = require('express-session'); //nuevo código session --konrad
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); //nuevo código mostrar enlaces de sesión --konrad
+const cookies = require('cookie-parser'); //nuevo código cookies --konrad
 
 
 const PORT = process.env.PORT || 3000;
@@ -25,7 +27,9 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
+app.use(cookies()); //nuevo código cookies --konrad
 
+app.use(userLoggedMiddleware); //nuevo código mostrar enlaces de sesión --konrad
 app.use('/productos', routerDeProductos);
 app.use('/usuarios', usuariosRouter);
 app.use("/", mainRouter);

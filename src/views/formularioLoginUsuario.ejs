@@ -12,20 +12,25 @@
 
                 <form action="/usuarios/login" method="post">
 
-                     <!-- validation para email --konrad -->
-                     <% if(locals.errors && errors.email) { %>
+                    <!-- validation para email --konrad -->
+                    <% if(locals.errors && errors.email) { %>
                         <div class="text-danger">
                             <%= errors.email.msg %>
                         </div>
                         <% } %>
-                    <input class="controls" type="email" name="email" placeholder="Ingrese su usuario">
-    
-                    <input class="controls" type="password" name="password" placeholder="Ingrese su contraseña">
-    
-                    <a href="/usuarios"><input class="button" type="submit" value="INGRESAR"></a>
-                    
+                            <input class="controls" type="email" name="email" placeholder="Ingrese su usuario">
+
+                            <input class="controls" type="password" name="password" placeholder="Ingrese su contraseña">
+
+                            <label>
+                                <input type="checkbox" name="remember_user"> Recordar mi usuario
+                            </label>
+                            <br>
+                            <br>
+                            <a href="/usuarios"><input class="button" type="submit" value="INGRESAR"></a>
+
                 </form>
-                    <a href="/usuarios/registro"><input class="button" type="submit" value="Creá tu cuenta"></a>
+                <a href="/usuarios/registro"><input class="button" type="submit" value="Creá tu cuenta"></a>
 
 
 

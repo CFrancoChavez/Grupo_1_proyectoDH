@@ -18,5 +18,15 @@
   "password": "$2a$10$UlY2kRz/Kt4a2L2VorgjTOQQo/oOZtND491ds4/DeWnwBSQLDBH0q",
   "password_confirm": "$2a$10$4RQbG4ng0lfCr4b/kVnYDeksidreR5aHUFgVPWaE8LCzygYGgmWgW",
   "avatar": "1662272374637_img.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Konrad",
+  "lastName": "Knochenhauer",
+  "email": "konradkn@outlook.com",
+  "phone": "",
+  "password": "$2a$10$gRMqIVMwXNJrIEayRDStROAdJ/1euJeuBSwh0y3MWEXnzBcsrJsim",
+  "password_confirm": "$2a$10$t.i2dcn.Lw8eff71tY2cTuVUFKZkwj92C/8Sy163VO.WLRi2/89Ie",
+  "avatar": "1662600656269_img.jpg"
  }
 ]

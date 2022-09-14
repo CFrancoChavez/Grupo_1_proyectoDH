@@ -5,7 +5,7 @@ const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 
 const { validationResult }= require('express-validator') //nuevo código express validator --konrad
 const User = require('../models/User') //nuevo código --konrad
-
+//const db = require("../data")
 
 
 const controller = {

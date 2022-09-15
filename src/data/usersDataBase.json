@@ -28,5 +28,15 @@
   "password": "$2a$10$gRMqIVMwXNJrIEayRDStROAdJ/1euJeuBSwh0y3MWEXnzBcsrJsim",
   "password_confirm": "$2a$10$t.i2dcn.Lw8eff71tY2cTuVUFKZkwj92C/8Sy163VO.WLRi2/89Ie",
   "avatar": "1662600656269_img.jpg"
+ },
+ {
+  "id": 4,
+  "name": "lauta",
+  "lastName": "profe",
+  "email": "profe@gmail.com",
+  "phone": "156273976",
+  "password": "$2a$10$PpTraxHUivFEJzut4i/bf.pco5wPBtflo6vmI7qB0kgkdWu11bUtG",
+  "password_confirm": "$2a$10$4Oc2fgu8NX1ahiRGNeQCPuVG5i2KVs7BOUP9b7VW0mDb2nNifsuj.",
+  "avatar": "1663204114387_img.jpg"
  }
 ]

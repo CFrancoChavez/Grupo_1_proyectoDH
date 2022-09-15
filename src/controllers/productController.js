@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-
+const db =require("../database/models/index");
 const readJsonFile = ( path ) => {
     const data = fs.readFileSync(path, "utf-8");
     const dataParsed = JSON.parse(data);
@@ -33,26 +33,28 @@ const controller = {
         return res.render("products/products_create_form");
     },
     // Create -  Method to store
-	store: (req, res) => {
+	create: (req, res) => {
 		// Do the magic
 		//Leemos la db de productos para luego agregar un producto nuevo a la lista
-		const products = readJsonFile(productsFilePath)
+		//const products = readJsonFile(productsFilePath) descomentar para usar con base Json.
 		// Creamos la estructura de un producto nuevo con la info del formulario
-		const producto = {
-			id: products[products.length -1].id + 1,
+		//const producto = {//se usa con Json
+			//id: products[products.length -1].id + 1,// se usa con Json
+		db.Product.create({
 			name: req.body.name,
 			price: req.body.price,
 			discount: req.body.discount,
 			category: req.body.category,
 			description: req.body.description,
 			image: req.file?.filename || "default-image.png"
-		}
+		})
 		// Agregamos el producto creado al listado existente que leimos al principio
-		products.push(producto);
+		//products.push(producto);se usa con Json
 		// Reescribimos la db con los datos actualizados y en formato json
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+		//fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));se usa con Json
 		// Redirigimos a la pagina de listado de productos
-		return res.redirect("/productos")
+		//return //se usa con Json
+		res.redirect("/productos")
 	},
 
 	// Update - Form to edit

@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes){
     const Product =sequelize.define('Product',{
         id : {
-            type: DataTypes.INTEGER.UNSIGNED,
+            type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true,
             allowNull: false

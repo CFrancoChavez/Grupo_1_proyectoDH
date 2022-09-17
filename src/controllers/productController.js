@@ -54,50 +54,86 @@ const controller = {
 		//fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));se usa con Json
 		// Redirigimos a la pagina de listado de productos
 		//return //se usa con Json
-		res.redirect("/productos")
+		.then(function(){
+            return res.redirect("/productos")
+        })
+		//res.redirect("/productos")
 	},
 
 	// Update - Form to edit
-	edit: (req, res) => {
-		//return res.json(req.params) para ver si llega el id
-		const products = readJsonFile(productsFilePath)
-		const product = products.find(product => product.id == req.params.id)
+	//El código desde línea 65 a 70 funciona con la base de datos Json.
+	// edit: (req, res) => {
+	// 	//return res.json(req.params) para ver si llega el id
+	// 	const products = readJsonFile(productsFilePath)
+	// 	const product = products.find(product => product.id == req.params.id)
 	
-		res.render('products/product_edit_form', { product });
+	// 	res.render('products/product_edit_form', { product });
+	edit: async function (req, res) {
+        const id = req.params.id;
+        const product = await db.Product.findByPk(id);
+        const products = await db.Product.findAll();
+        
+        return res.render('products/product_edit_form', { product });
 	},
 	// Update - Method to update
+	//Desde la linea 80 a la 97 codigo que funciona con base de datos Json.
+	// update: (req, res) => {
+	// 	// Do the magic
+	// 	const products = readJsonFile(productsFilePath)
+	// 	for(let i = 0; i < products.length; i++) {
+	// 		if(products[i].id == req.params.id){
+	// 			products[i] = {
+	// 				...products[i],
+	// 				name: req.body.name,
+	// 				price: req.body.price,
+	// 				discount: req.body.discount,
+	// 				category: req.body.category,
+	// 				description: req.body.description
+	// 				//image: req.file?.filename || "default-image.png"
+	// 			} 
+	// 		}
+	// 	};
+	// 	fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+	// 	return res.redirect("/productos");
 	update: (req, res) => {
-		// Do the magic
-		const products = readJsonFile(productsFilePath)
-		for(let i = 0; i < products.length; i++) {
-			if(products[i].id == req.params.id){
-				products[i] = {
-					...products[i],
-					name: req.body.name,
+        const id = req.params.id;
+        db.Product.update({
+            name: req.body.name,
 					price: req.body.price,
 					discount: req.body.discount,
 					category: req.body.category,
 					description: req.body.description
 					//image: req.file?.filename || "default-image.png"
-				} 
-			}
-		};
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-		return res.redirect("/productos");
+        },{
+            where: {
+                id
+            }
+        })
+        .then(function(){
+            return res.redirect("/productos");
+        })
 	},
 
 	// Delete - Delete one product from DB
-	destroy : (req, res) => {
-		const products = readJsonFile(productsFilePath);
-		const productosFiltrados = products.filter(product => product.id != req.params.id);
+	//linea 119  hasta 125 funciona con base de datos Json
+	// destroy : (req, res) => {
+	// 	const products = readJsonFile(productsFilePath);
+	// 	const productosFiltrados = products.filter(product => product.id != req.params.id);
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(productosFiltrados, null, 2));
-		return res.redirect("/productos");
-	}
+	// 	fs.writeFileSync(productsFilePath, JSON.stringify(productosFiltrados, null, 2));
+	// 	return res.redirect("/productos");
+	// }
+	destroy: (req, res) => {
+        const id = req.params.id;
+        db.Product.destroy({ where: { id }})
+        .then(function(){
+            return res.redirect("/productos");
+        })
 
 
     
-    };
+    },
+}
 
 
 module.exports = controller;

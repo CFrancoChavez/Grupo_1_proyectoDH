@@ -34,8 +34,9 @@ module.exports = function(sequelize, DataTypes){
 
     },{
 
-        createdAt : 'created_at',
-        updatedAt :'updated_at'
+        // createdAt : 'created_at',
+        // updatedAt :'updated_at'
+        timestamps : false
     });
     return Product
 }

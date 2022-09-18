@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const db =require("../database/models/index");
+// linea 6 hasta 10 código para usar con la base de datos Json
 const readJsonFile = ( path ) => {
     const data = fs.readFileSync(path, "utf-8");
     const dataParsed = JSON.parse(data);
@@ -9,28 +10,49 @@ const readJsonFile = ( path ) => {
 }
 
 const controller = {
-    detalleProducto: (req, res) => {
-
-		const productos = readJsonFile(productsFilePath);
-		const id = req.params.id;
-		const productoEncontrado = productos.find(producto => {
-			return producto.id == id
+	detalleProducto: (req, res) => {
+        const id = req.params.id;
+        db.Product.findByPk(id)
+        .then(function (products) {
+			return res.render("products/detalle", { productoEncontrado:products });
 		})
+	// Este metodo funciona con database json
+    // detalleProducto: (req, res) => {
 
-        return res.render("products/detalle", {productoEncontrado})
-    },
+	// 	const productos = readJsonFile(productsFilePath);
+	// 	const id = req.params.id;
+	// 	const productoEncontrado = productos.find(producto => {
+	// 		return producto.id == id
+	// 	})
+
+    //     return res.render("products/detalle", {productoEncontrado})
+    	},
     carro: (req, res) => {
 		// Leer de la base de datos los productos que estan en el carrito y enviarlos a la vista
         return res.render("products/carrito")
     },
-    productos: (req, res) => {
-		const productos = readJsonFile(productsFilePath);
-        return res.render("products/products", {products: productos})
+	productos: (req, res) => {
+        db.Product.findAll({
+            
+        })
+        .then(function(productos){
+  
+            return res.render("products/products", {products: productos})
+        })
+	//Método para listar los productos con database Json.
+    // productos: (req, res) => {
+	// 	const productos = readJsonFile(productsFilePath);
+    //     return res.render("products/products", {products: productos})
     },
+    //Método para crear línea 31 hasta la 33 funciona con database Json.
+    // crearProducto: (req, res) => {
     
-    crearProducto: (req, res) => {
-    
-        return res.render("products/products_create_form");
+    //     return res.render("products/products_create_form");
+	crearProducto: (req, res) => {
+			db.Product.findAll()
+			.then(function(products){
+				return res.render("products/products_create_form");
+			})
     },
     // Create -  Method to store
 	create: (req, res) => {

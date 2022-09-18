@@ -1,4 +1,4 @@
-/*const path = require('path');
+const path = require('path');
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination: (req, file, cb)=> {
@@ -9,4 +9,4 @@ const storage = multer.diskStorage({
         cb(null, newFileName);
     }
 });
-module.exports = multer({storage});*/
+module.exports = multer({storage});

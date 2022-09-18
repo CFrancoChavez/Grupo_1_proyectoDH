@@ -29,7 +29,7 @@ app.use(session({
 }));
 app.use(cookies()); //nuevo código cookies --konrad
 
-app.use(userLoggedMiddleware); //nuevo código mostrar enlaces de sesión --konrad
+//app.use(userLoggedMiddleware); // pausa en este middleware para verificar funcionalidad sequelize
 app.use('/productos', routerDeProductos);
 app.use('/usuarios', usuariosRouter);
 app.use("/", mainRouter);

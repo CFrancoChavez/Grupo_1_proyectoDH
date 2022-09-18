@@ -1,11 +1,16 @@
 const fs = require("fs");
 const path = require("path");
 const bcryptjs = require('bcryptjs')
-const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
+//const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 
-const { validationResult }= require('express-validator') //nuevo código express validator --konrad
+
+
+const db = require("../database/models/index"); //nuevo código MIGRACIÓN SQL --Konrad
+
+
+/* const { validationResult } = require('express-validator') //nuevo código express validator --konrad
 const User = require('../models/User') //nuevo código --konrad
-//const db = require("../data")
+//const db = require("../data") */
 
 
 const controller = {
@@ -20,8 +25,12 @@ const controller = {
     processLogin: (req, res) => {
     
         // Recibir la info del formulario de login y almacenar en un storage
-        let userToLog = User.findByField('email', req.body.email);
-        
+        //let userToLog = User.findByField('email', req.body.email);
+        const email = req.params.email
+        let userToLog = db.User.findByPK(email);
+        //-----------------------------------nuevo-------------------------------------
+
+
         if(userToLog) {
             let passwordOk = bcryptjs.compareSync(req.body.password, userToLog.password);
             if(passwordOk) {
@@ -64,54 +73,49 @@ const controller = {
         })
     },
 
-
+    //---------------SE QUEDA-----------------
     registerForm: (req, res) => {
         // Mostrar el formulario de registro
       
         return res.render("formularioRegistroUsuario");
     },
 
-    //modificación en el código para express validator --konrad
-    processForm: (req, res) => {
-        // Procesar el formulario de registro
-      const resultValidation = validationResult(req);
-     
-      if(resultValidation.errors.length > 0) {
-        return res.render("formularioRegistroUsuario", {
-            errors: resultValidation.mapped(),
-            oldData: req.body
-        });
-      };
-
-
-      let userInDB = User.findByField('email', req.body.email);
-      //return res.send(userInDB);
-
-
-      //nuevo código validación de email --konrad
-      if(userInDB) {
-        return res.render('formularioRegistroUsuario', {
-            errors: {
-                email: {
-                    msg: 'Este email ya está registrado'
-                }
-            },
-            oldData: req.body
+    create: (req, res) => {
+        db.User.create({
+            name: req.body.name,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            phone: req.body.phone,
+            password: req.body.password,
+            avatar: req.file?.filename || "default-image.png"
         })
-      };
+        .then(function() {
+            return res.redirect('/usuarios/login')
+        })
 
-
-      //nuevo código encriptación de contraseña
-      let userToCreate = {
-        ...req.body,
-        password: bcryptjs.hashSync(req.body.password, 10),
-        password_confirm: bcryptjs.hashSync(req.body.password_confirm, 10),
-        avatar: req.file.filename
-      }
-
-      let userCreated = User.create(userToCreate);
-      return res.redirect('/usuarios/login')
     },
+
+    edit: (req, res) => {
+        const id = req.params.id;
+        db.User.findByPK(id)
+        .then(function(user) {
+            return res.render('editUser', { user }) // falta hacer la vista de edición de usuario
+        })
+    },
+    update: (req, res) => {
+        const id = req.params.id;
+        db.User.update({
+            name: req.body.name,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            phone: req.body.phone,
+            password: req.body.password,
+            avatar: req.file?.filename || "default-image.png"
+        })
+    },
+
+
+    //---------------SE QUEDA-----------------
 
     logout: (req, res) => {
         res.clearCookie('userEmail');

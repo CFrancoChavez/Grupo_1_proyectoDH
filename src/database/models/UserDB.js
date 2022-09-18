@@ -1,10 +1,12 @@
 module.exports = function(sequelize, DataTypes){
     const User =sequelize.define('User',{
-        id : {
+        id: {
             type: DataTypes.INTEGER.UNSIGNED,
             autoIncrement: true,
             primaryKey: true,
             allowNull: false
+
+
         },
         name: {
             type: DataTypes.STRING(50),
@@ -19,7 +21,7 @@ module.exports = function(sequelize, DataTypes){
             allowNull: false
         },
         phone: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER(11),
             allowNull: false
 
         },
@@ -32,7 +34,8 @@ module.exports = function(sequelize, DataTypes){
             allowNull: false
         },
 
-    },{
+    },
+    {
 
         // createdAt : 'created_at',
         // updatedAt :'updated_at'

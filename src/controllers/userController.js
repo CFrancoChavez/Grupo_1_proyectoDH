@@ -8,7 +8,7 @@ const bcryptjs = require('bcryptjs')
 const db = require("../database/models/index"); //nuevo código MIGRACIÓN SQL --Konrad
 
 
-/* const { validationResult } = require('express-validator') //nuevo código express validator --konrad
+const { validationResult } = require('express-validator') //nuevo código express validator --konrad
 const User = require('../models/User') //nuevo código --konrad
 //const db = require("../data") */
 
@@ -26,41 +26,49 @@ const controller = {
     
         // Recibir la info del formulario de login y almacenar en un storage
         //let userToLog = User.findByField('email', req.body.email);
-        const email = req.params.email
-        let userToLog = db.User.findByPK(email);
+        const email = req.body.email
+        db.User.findOne({
+            where: { email : req.body.email }
+        })
+        .then((userToLog) => {
+            if(userToLog) {
+               // return res.json(userToLog)
+                let passwordOk = bcryptjs.compareSync(req.body.password, userToLog.password);
+                if(passwordOk) {
+                    delete userToLog.password;
+                    req.session.userLogged = userToLog;
+
+    
+                    //nuevo condicional para cookies recordar usuario --konrad
+    
+                    if (req.body.remember_user) {
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+                    }
+                       
+                    return res.redirect('/usuarios/detalleusuario')
+                }
+                return res.render('formularioLoginUsuario', {
+                    errors: {
+                        email: {
+                            msg: 'Las credenciales ingresadas no son válidas'
+                        }
+                    }
+                });
+            };
+    
+            // return res.render('formularioLoginUsuario', {
+            //     errors: {
+            //         email: {
+            //             msg: 'No se encuentra este email registrado en Sports House'
+            //         }
+            //     }
+            // });
+
+        })
+        
         //-----------------------------------nuevo-------------------------------------
 
 
-        if(userToLog) {
-            let passwordOk = bcryptjs.compareSync(req.body.password, userToLog.password);
-            if(passwordOk) {
-                delete userToLog.password;
-                req.session.userLogged = userToLog;
-
-                //nuevo condicional para cookies recordar usuario --konrad
-
-                if (req.body.remember_user) {
-                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-                }
-                   
-                return res.redirect('/usuarios/detalleusuario')
-            }
-            return res.render('formularioLoginUsuario', {
-                errors: {
-                    email: {
-                        msg: 'Las credenciales ingresadas no son válidas'
-                    }
-                }
-            });
-        };
-
-        return res.render('formularioLoginUsuario', {
-            errors: {
-                email: {
-                    msg: 'No se encuentra este email registrado en Sports House'
-                }
-            }
-        });
     },
 
       //nuevo código muestra la vista del detalle de usuario --konrad 
@@ -81,6 +89,7 @@ const controller = {
     },
 
     create: (req, res) => {
+        req.body.password = bcryptjs.hashSync(req.body.password)
         db.User.create({
             name: req.body.name,
             lastName: req.body.lastName,

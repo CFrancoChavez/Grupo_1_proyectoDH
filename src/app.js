@@ -12,6 +12,7 @@ const session = require('express-session'); //nuevo código session --konrad
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); //nuevo código mostrar enlaces de sesión --konrad
 const cookies = require('cookie-parser'); //nuevo código cookies --konrad
 const apiRouterDeProductos = require('./routers/api/apiProductRouter');
+const apiRouterDeUsuarios = require('./routers/api/apiUserRouter');
 
 
 const PORT = process.env.PORT || 4000;
@@ -35,6 +36,7 @@ app.use('/productos', routerDeProductos);
 app.use('/usuarios', usuariosRouter);
 app.use("/", mainRouter);
 app.use('/api/productos',apiRouterDeProductos);
+app.use('/api/usuarios',apiRouterDeUsuarios);
 
 app.listen(PORT, () => console.log("Servidor corriendo en el puerto: " + PORT));
 

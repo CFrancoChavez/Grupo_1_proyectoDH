@@ -7,6 +7,7 @@ const app = express();
 const methodOverride =  require('method-override');
 const mainRouter = require("./routers/mainRouters");
 const routerDeProductos = require('./routers/productsRouter');
+const apiRouterDeProductos = require('./routers/api/apiProductRouter');
 const usuariosRouter = require('./routers/userRouter');
 const session = require('express-session'); //nuevo código session --konrad
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); //nuevo código mostrar enlaces de sesión --konrad
@@ -31,6 +32,7 @@ app.use(cookies()); //nuevo código cookies --konrad
 
 //app.use(userLoggedMiddleware); // pausa en este middleware para verificar funcionalidad sequelize
 app.use('/productos', routerDeProductos);
+app.use('/api/productos',apiRouterDeProductos);
 app.use('/usuarios', usuariosRouter);
 app.use("/", mainRouter);
 

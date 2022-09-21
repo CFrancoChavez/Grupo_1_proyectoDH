@@ -162,6 +162,9 @@ const controller = {
       let userCreated = User.create(userToCreate);
       return res.redirect('/usuarios/login') */
     },
+   /*  edit: (req, res) => {
+
+    }, */
 
 
 

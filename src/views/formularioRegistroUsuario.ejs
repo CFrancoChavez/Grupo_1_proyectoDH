@@ -9,7 +9,9 @@
 
                 <h3>FORMULARIO DE REGISTRO</h3>
               
-
+              <!--   <ul class="errores">
+                    <li></li>
+                </ul> -->
 
                 <form action="/usuarios/registro" method="post" enctype="multipart/form-data">
                     
@@ -49,13 +51,16 @@
                     </div>
                     <% } %>
                 <input class="controls" type="password" name="password" value="<%= locals.oldData ? oldData.password : null %>" placeholder="Ingrese su contraseña">
+                
 
                 <% if(locals.errors && errors.password_confirm) { %>
                     <div class="text-danger">
                         <%= errors.password_confirm.msg %>
                     </div>
                     <% } %>
-                <input class="controls" type="password" name="password_confirm" placeholder="Confirme su contraseña">
+                <input class="controls" type="password" name="password_confirm" placeholder="Confirme su contraseña" data-nombre="contrasenia">
+                <br>
+                <span></span>
 
 
                     <!-- validation para contraseña --konrad -->
@@ -74,5 +79,7 @@
             <%- include('./partials/footer')%>
 
     </body>
+
+    <script src="/public/js/registerFormValidations.js"></script>
 
 </html>

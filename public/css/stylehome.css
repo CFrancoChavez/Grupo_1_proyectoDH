@@ -61,11 +61,27 @@ body{
 
 
 
-/* css card */
+/* botones creación de producto*/
 
-/* css card 2*/
+li {
+    list-style-type: none;
+}
 
-/* css card 2*/
+.col-12 .creacionproductotexto {
+    outline: none;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    background-color: tomato;
+    border-radius: 20px;
+    
+    color: white;
+}
+/* botones creación de producto*/
+
+
+
+
 
 
 

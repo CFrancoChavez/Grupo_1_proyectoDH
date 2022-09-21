@@ -81,6 +81,9 @@ router.post('/registro', uploadFile.single('imagenUsuario'), validations, userCo
 //crear el registro
 //router.post('/registro', uploadFile.single('imagenUsuario'), userController.create);
 
+//mostrar la vista de edición de usuario
+//router.get('/detalleusuario/editar', userController.edit)
+
 
 
 //detalle de usuario 

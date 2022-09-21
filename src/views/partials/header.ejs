@@ -3,19 +3,21 @@
     <div class="logo">
         <a href="/"><img src="/images/Logo1.png" width="360px" alt="Logo"></a>
     </div>
+   
     <div class="caja">
         <i class="fa fa-search"></i>
         <input type="text" placeholder="Buscar productos">
     </div>
 
-
+    
+    
     <nav class="navegacion">
-
+        
         <ul>
-
-            <li><i class="fab fa-whatsapp"></i></li>
             
+            <li><i class="fab fa-whatsapp"></i></li>
             <li><a href="/productos">Productos</a></li>
+            
             
             <li><a href="/productos/carrito">Carrito de compra</a><i class="fas fa-shopping-basket"></i>
             </li>
@@ -24,13 +26,13 @@
             
             
             
-                <% if (locals.isLogged) { %>
+            <% if (locals.isLogged) { %>
                 <!--barra de navegación para sesión iniciada // nuevo código Konrad-->
                 
-
-                    <div class="barraUsuario">
-                        <li><a href="/usuarios/login"><i class="far fa-user"></i></a></li>
-                        
+                
+                <div class="barraUsuario">
+                    <li><a href="/usuarios/login"><i class="far fa-user"></i></a></li>
+                    
                         <div class="navbar">
                         </div>
                         <div class="dropdown">

@@ -75,17 +75,16 @@ router.post('/login', userController.processLogin);
 //mostrar la vista del registro
 router.get('/registro', guestMiddleware, userController.registerForm); //nuevo código, se agregó el middleware guestMiddleware --konrad
 
+//procesar el registro
+router.post('/registro', uploadFile.single('imagenUsuario'), validations, userController.processForm);
+
 //crear el registro
-router.post('/registro', uploadFile.single('imagenUsuario'), userController.create);
+//router.post('/registro', uploadFile.single('imagenUsuario'), userController.create);
+
+
 
 //detalle de usuario 
 router.get('/detalleusuario', authMiddleware, userController.userDetail);
-
-//mostrar edición usuario 
-router.get('/detalleusuario/edit/:id', userController.edit);
-
-//procesar cambios en edición de usuario
-router.put('/detalleusuario/update/:id', userController.update);
 
 //proceso de logout
 router.get('/logout', userController.logout);

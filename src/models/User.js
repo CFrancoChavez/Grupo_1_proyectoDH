@@ -1,10 +1,8 @@
- /* const fs = require('fs');
+const fs = require('fs');
 
 
 const User = {
-
     fileName: './src/data/usersDataBase.json',
-   
 
     create: function(userData) {
         let allUsers = this.findAll();
@@ -63,4 +61,3 @@ const User = {
 
 
 module.exports = User;
-*/

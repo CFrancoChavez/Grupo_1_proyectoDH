@@ -4,10 +4,9 @@ const bcryptjs = require('bcryptjs')
 //const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const db = require("../database/models/index"); //nuevo código MIGRACIÓN SQL --Konrad
 
-
-const { validationResult } = require('express-validator') //nuevo código express validator --konrad
+const { validationResult }= require('express-validator') //nuevo código express validator --konrad
 const User = require('../models/User') //nuevo código --konrad
-//const db = require("../data") */
+
 
 
 const controller = {
@@ -25,16 +24,14 @@ const controller = {
         //let userToLog = User.findByField('email', req.body.email);
         const email = req.body.email
         db.User.findOne({
-            where: { email : req.body.email }
+            where: { email : email}
         })
         .then((userToLog) => {
             if(userToLog) {
-               // return res.json(userToLog)
                 let passwordOk = bcryptjs.compareSync(req.body.password, userToLog.password);
                 if(passwordOk) {
                     delete userToLog.password;
                     req.session.userLogged = userToLog;
-
     
                     //nuevo condicional para cookies recordar usuario --konrad
     
@@ -52,21 +49,23 @@ const controller = {
                     }
                 });
             };
-    
-            // return res.render('formularioLoginUsuario', {
-            //     errors: {
-            //         email: {
-            //             msg: 'No se encuentra este email registrado en Sports House'
-            //         }
-            //     }
-            // });
 
+            if(userToLog === null) {
+                
+                return res.render('formularioLoginUsuario', {
+                   errors: {
+                       email: {
+                           msg: 'No se encuentra este email registrado en Sports House'
+                       }
+                   }
+               }); 
+            } 
         })
-        
-        //-----------------------------------nuevo-------------------------------------
 
+            
 
     },
+        
 
       //nuevo código muestra la vista del detalle de usuario --konrad 
       userDetail: (req, res) => {
@@ -78,14 +77,15 @@ const controller = {
         })
     },
 
-    //---------------SE QUEDA-----------------
+
     registerForm: (req, res) => {
         // Mostrar el formulario de registro
       
         return res.render("formularioRegistroUsuario");
     },
 
-    create: (req, res) => {
+
+/*     create: (req, res) => {
         req.body.password = bcryptjs.hashSync(req.body.password)
         db.User.create({
             name: req.body.name,
@@ -99,29 +99,71 @@ const controller = {
             return res.redirect('/usuarios/login')
         })
 
-    },
+    }, */
 
-    edit: (req, res) => {
-        const id = req.params.id;
-        db.User.findByPK(id)
-        .then(function(user) {
-            return res.render('editUser', { user }) // falta hacer la vista de edición de usuario
-        })
-    },
-    update: (req, res) => {
-        const id = req.params.id;
-        db.User.update({
-            name: req.body.name,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            phone: req.body.phone,
-            password: req.body.password,
-            avatar: req.file?.filename || "default-image.png"
-        })
-    },
+    //modificación en el código para express validator --konrad
+    processForm: (req, res) => {
+        // Procesar el formulario de registro
+      const resultValidation = validationResult(req);
+     
+      if(resultValidation.errors.length > 0) {
+        return res.render("formularioRegistroUsuario", {
+            errors: resultValidation.mapped(),
+            oldData: req.body
+        });
+      };
 
 
-    //---------------SE QUEDA-----------------
+      //let userInDB = User.findByField('email', req.body.email);
+      const email = req.body.email
+      db.User.findOne({
+        where: { email : email}
+      })
+      .then((userInDB) => {
+
+          if(userInDB) {
+            return res.render('formularioRegistroUsuario', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    }
+                },
+                oldData: req.body
+            })
+          };
+      })
+
+      req.body.password = bcryptjs.hashSync(req.body.password)
+      db.User.create({
+          name: req.body.name,
+          lastName: req.body.lastName,
+          email: req.body.email,
+          phone: req.body.phone,
+          password: req.body.password,
+          avatar: req.file?.filename || "default-image.png"
+      })
+      .then(function() {
+          return res.redirect('/usuarios/login')
+      })
+      //return res.send(userInDB);
+
+
+      //nuevo código validación de email --konrad
+
+
+      //nuevo código encriptación de contraseña
+     /*  let userToCreate = {
+        ...req.body,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        password_confirm: bcryptjs.hashSync(req.body.password_confirm, 10),
+        avatar: req.file.filename
+      }
+
+      let userCreated = User.create(userToCreate);
+      return res.redirect('/usuarios/login') */
+    },
+
+
 
     logout: (req, res) => {
         res.clearCookie('userEmail');

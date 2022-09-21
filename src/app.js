@@ -7,14 +7,14 @@ const app = express();
 const methodOverride =  require('method-override');
 const mainRouter = require("./routers/mainRouters");
 const routerDeProductos = require('./routers/productsRouter');
-const apiRouterDeProductos = require('./routers/api/apiProductRouter');
 const usuariosRouter = require('./routers/userRouter');
 const session = require('express-session'); //nuevo código session --konrad
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); //nuevo código mostrar enlaces de sesión --konrad
 const cookies = require('cookie-parser'); //nuevo código cookies --konrad
+const apiRouterDeProductos = require('./routers/api/apiProductRouter');
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -30,11 +30,11 @@ app.use(session({
 }));
 app.use(cookies()); //nuevo código cookies --konrad
 
-//app.use(userLoggedMiddleware); // pausa en este middleware para verificar funcionalidad sequelize
+app.use(userLoggedMiddleware); //nuevo código mostrar enlaces de sesión --konrad
 app.use('/productos', routerDeProductos);
-app.use('/api/productos',apiRouterDeProductos);
 app.use('/usuarios', usuariosRouter);
 app.use("/", mainRouter);
+app.use('/api/productos',apiRouterDeProductos);
 
 app.listen(PORT, () => console.log("Servidor corriendo en el puerto: " + PORT));
 

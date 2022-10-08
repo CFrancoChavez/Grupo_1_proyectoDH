@@ -1,76 +1,70 @@
-# Grupo_1_SPORTS-HOUSE
-SPORTS HOUSE
+# Getting Started with Create React App
 
-Este proyecto está destinado a la creación de un ecomerce dedicado a la venta de zapatillas deportivas. 
-Trabajando con marcas reconocidas como Nike, Puma, Topper, Adidas, entre otras.
-Se tendrá como objetivo captar a la Población en general.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Nuestro equipo de trabajo está conformado por:
-Konrad Knochenhauer Salazar.
-César Franco Chávez.
+## Available Scripts
 
+In the project directory, you can run:
 
-Por tal motivo tomaremos como referencia las siguientes páginas web:
-https://www.dexter.com.ar/zapatillas-fila-axilus-ace-clay/FI_F01TN004171-4816.html
-https://www.behance.net/gallery/67629967/Shoesstore?tracking_source=search_projects%7Cweb%20 
-https://www.newsport.com.ar/
-https://ar.puma.com/
-https://www.adidas.com.ar/
+### `npm start`
 
-Link de Trello https://trello.com/b/WQGAdHFF/grupo-1
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Actualización Sprint 2
-Retro:
-1. Comenzar a hacer: Organizar por tareas
-2. Hacer más: Reuniones por zoom
-3. Continuar haciendo:Comunicación por whatsApp.
-4. Hacer menos:demorar las entregas
-5. Dejar de hacer: cancelar reuniones
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Actualización Sprint 3
-Retro:
-1. Comenzar a hacer: Más fluidez en las comunicaciones
-2. Hacer más: Reuniones por zoom
-3. Continuar haciendo:Comunicación por whatsApp/ participar activamente de las reuniones en las clases de práctica.
-4. Hacer menos:demorar las entregas
-5. Dejar de hacer: cancelar reuniones
+### `npm test`
 
-Actualización Sprint 4
-Retro:
-1. Comenzar a hacer: Enfocarnos en las entregas de los sprint
-2. Hacer más: Reuniones por zoom/ consultar con los profes las dudas para salvar los obstáculos más rápidamente
-3. Continuar haciendo:Ayudarnos en las resoluciones de las consignas del sprint/ Reorganizar las tareas según las fortalezas individuales.
-4. Hacer menos:demorar las entregas
-5. Dejar de hacer: Procrastinar nuestras obligaciones de grupo
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Actualización Sprint 5
-Retro:
-1. Comenzar a hacer: Compartimentar las tareas a realizar y enfocarnos en las partes asignadas a cada uno
-2. Hacer más: Reuniones por zoom/ consultar con los profes las dudas para salvar los obstáculos más rápidamente
-3. Continuar haciendo:Ayudarnos en las resoluciones de las consignas del sprint/ Comunicación fluida
-4. Hacer menos:demorar las entregas
-5. Dejar de hacer: Esperar hasta último momento para solicitar apoyo uno del otro.
+### `npm run build`
 
-Actualización Sprint 6
-Retro:
-1. Comenzar a hacer: Dividir las tareas en pasos más pequeños para facilitar su resolución
-2. Hacer más: Reuniones por zoom/ consultar con los profes las dudas para salvar los obstáculos más rápidamente
-3. Continuar haciendo:Escoger un archivo a desarrollar y terminarlo/ Reorganizar las tareas según las fortalezas individuales.
-4. Hacer menos:demorar las entregas
-5. Dejar de hacer: Detenernos
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Actualización Sprint 7
-Retro:
-1. Comenzar a hacer: Enfocarnos en las entregas de los sprint
-2. Hacer más: Reuniones por zoom/ consultar con los profes las dudas para salvar los obstáculos más rápidamente
-3. Continuar haciendo:Ayudarnos en las resoluciones de las consignas del sprint/ Trabajar con git hub.
-4. Hacer menos:Si nos atascamos con algo, quedarnos en ese punto.
-5. Dejar de hacer: Quedarnos con dudas.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Actualización Sprint 8
-Retro:
-1. Comenzar a hacer: Implementar la mayor cantidad de funcionalidades en el tiempo que queda
-2. Hacer más: Reuniones por zoom/ consultar con los profes las dudas para salvar los obstáculos más rápidamente
-3. Continuar haciendo:Ayudarnos en las resoluciones de las consignas del sprint/ Trabajar con git hub.
-4. Hacer menos:Si nos atascamos con algo, quedarnos en ese punto.
-5. Dejar de hacer: Quedarnos con dudas.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

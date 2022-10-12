@@ -13,12 +13,15 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); //nu
 const cookies = require('cookie-parser'); //nuevo código cookies --konrad
 const apiRouterDeProductos = require('./routers/api/apiProductRouter');
 const apiRouterDeUsuarios = require('./routers/api/apiUserRouter');
+const cors = require('cors');
 
 
 const PORT = process.env.PORT || 4000;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));

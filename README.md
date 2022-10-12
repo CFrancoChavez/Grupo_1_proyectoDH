@@ -1,21 +1,14 @@
 # Grupo_1_SPORTS-HOUSE
 SPORTS HOUSE
 
-Este proyecto está destinado a la creación de un ecomerce dedicado a la venta de artículos de deportes. 
-La actividad a desarrollar por este negocio será la comercialización al detalle de artículos deportivos (zapatería, confección y pequeños complementos). 
+Este proyecto está destinado a la creación de un ecomerce dedicado a la venta de zapatillas deportivas. 
 Trabajando con marcas reconocidas como Nike, Puma, Topper, Adidas, entre otras.
-Se tendrá como objetivo captar a la Población en general, que practique algún tipo de deporte o que guste vestir ropa deportiva. 
-Esta se puede segmentar a su vez, en distintos grupos en función de la edad (edad escolar, jóvenes, adultos, etc.). 
-Deportes que practiquen (fútbol, tenis, baloncesto, etc.), gustos y hábitos.
+Se tendrá como objetivo captar a la Población en general.
 
 Nuestro equipo de trabajo está conformado por:
-César Franco Chávez, quien reside en la ciudad de la Calera, provincia de Córdoba y trabaja actualmente como Técnico Electricista.
-Konrad Knochenhauer Salazar, quien reside en la Ciudad de México trabajando actualmente como arquitecto, le apasiona el mundo de la programación.
-Luis Miguel Paca, quien actualmente vive en Capital federal, Buenos Aires. Es una persona que disfruta mucho ver series animadas. 
-Actualmente trabaja como guardia de Seguridad de un Sanatorio privado.
-Por último, Fiorella Cardenal, quien reside en la localidad de Santa Fe Capital y actualmente se encuentra formando parte de la Mutual Jerárquicos Salud. 
-Somos un equipo de Estudiantes del Curso de Programación Web Full Stack y nuestra meta es 
-llegar a construir una tienda web en la que cada tipo de consumidor encuentre lo que busque rápido y cómodamente.
+Konrad Knochenhauer Salazar.
+César Franco Chávez.
+
 
 Por tal motivo tomaremos como referencia las siguientes páginas web:
 https://www.dexter.com.ar/zapatillas-fila-axilus-ace-clay/FI_F01TN004171-4816.html
@@ -50,3 +43,34 @@ Retro:
 4. Hacer menos:demorar las entregas
 5. Dejar de hacer: Procrastinar nuestras obligaciones de grupo
 
+Actualización Sprint 5
+Retro:
+1. Comenzar a hacer: Compartimentar las tareas a realizar y enfocarnos en las partes asignadas a cada uno
+2. Hacer más: Reuniones por zoom/ consultar con los profes las dudas para salvar los obstáculos más rápidamente
+3. Continuar haciendo:Ayudarnos en las resoluciones de las consignas del sprint/ Comunicación fluida
+4. Hacer menos:demorar las entregas
+5. Dejar de hacer: Esperar hasta último momento para solicitar apoyo uno del otro.
+
+Actualización Sprint 6
+Retro:
+1. Comenzar a hacer: Dividir las tareas en pasos más pequeños para facilitar su resolución
+2. Hacer más: Reuniones por zoom/ consultar con los profes las dudas para salvar los obstáculos más rápidamente
+3. Continuar haciendo:Escoger un archivo a desarrollar y terminarlo/ Reorganizar las tareas según las fortalezas individuales.
+4. Hacer menos:demorar las entregas
+5. Dejar de hacer: Detenernos
+
+Actualización Sprint 7
+Retro:
+1. Comenzar a hacer: Enfocarnos en las entregas de los sprint
+2. Hacer más: Reuniones por zoom/ consultar con los profes las dudas para salvar los obstáculos más rápidamente
+3. Continuar haciendo:Ayudarnos en las resoluciones de las consignas del sprint/ Trabajar con git hub.
+4. Hacer menos:Si nos atascamos con algo, quedarnos en ese punto.
+5. Dejar de hacer: Quedarnos con dudas.
+
+Actualización Sprint 8
+Retro:
+1. Comenzar a hacer: Implementar la mayor cantidad de funcionalidades en el tiempo que queda
+2. Hacer más: Reuniones por zoom/ consultar con los profes las dudas para salvar los obstáculos más rápidamente
+3. Continuar haciendo:Ayudarnos en las resoluciones de las consignas del sprint/ Trabajar con git hub.
+4. Hacer menos:Si nos atascamos con algo, quedarnos en ese punto.
+5. Dejar de hacer: Quedarnos con dudas.

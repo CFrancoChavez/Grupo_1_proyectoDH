@@ -18,6 +18,7 @@ https://ar.puma.com/
 https://www.adidas.com.ar/
 
 Link de Trello https://trello.com/b/WQGAdHFF/grupo-1
+Link de Repo del proyecto de React: https://github.com/CFrancoChavez/Dashboard-React.git
 
 Actualización Sprint 2
 Retro:

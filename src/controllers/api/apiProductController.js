@@ -18,7 +18,7 @@ const controller = {
     },
     productos: (req, res) => {
         db.Product.findAll({
-
+         attributes:["id","name","price","discount", "category",[db.Sequelize.fn("concat",req.protocol+"://"+req.get("host"),"/images/",db.Sequelize.col("image")),"imageUrl"]]
         })
         .then(function (products){
             return res.status(200).json({
